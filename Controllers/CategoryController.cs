@@ -34,6 +34,7 @@ namespace LibraryApp.Controllers
             {
                 _dbContext.Categories.Add(categoryObj);
                 _dbContext.SaveChanges();
+                TempData["success"] = "The category was created successfully";
                 return RedirectToAction("Index", "Category"); //Action first -- Controller second
             }
             return View();
@@ -65,6 +66,7 @@ namespace LibraryApp.Controllers
             {
                 _dbContext.Categories.Update(categoryObj);
                 _dbContext.SaveChanges();
+                TempData["success"] = "The category was updated successfully";
                 return RedirectToAction("Index", "Category"); //Action first -- Controller second
             }
             return View();
@@ -98,6 +100,7 @@ namespace LibraryApp.Controllers
             }
             _dbContext.Categories.Remove(category);
             _dbContext.SaveChanges();
+            TempData["success"] = "The category was deleted successfully";
             return RedirectToAction("Index", "Category");
 
         }
