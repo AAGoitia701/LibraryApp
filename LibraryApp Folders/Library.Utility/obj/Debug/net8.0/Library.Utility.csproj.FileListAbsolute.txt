@@ -1,0 +1,36 @@
+C:\LibraryApp\Library.Utility\bin\Debug\net8.0\Library.Utility.deps.json
+C:\LibraryApp\Library.Utility\bin\Debug\net8.0\Library.Utility.dll
+C:\LibraryApp\Library.Utility\bin\Debug\net8.0\Library.Utility.pdb
+C:\LibraryApp\Library.Utility\obj\Debug\net8.0\Library.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\LibraryApp\Library.Utility\obj\Debug\net8.0\Library.Utility.AssemblyInfoInputs.cache
+C:\LibraryApp\Library.Utility\obj\Debug\net8.0\Library.Utility.AssemblyInfo.cs
+C:\LibraryApp\Library.Utility\obj\Debug\net8.0\Library.Utility.csproj.CoreCompileInputs.cache
+C:\LibraryApp\Library.Utility\obj\Debug\net8.0\Library.Utility.sourcelink.json
+C:\LibraryApp\Library.Utility\obj\Debug\net8.0\Library.Utility.dll
+C:\LibraryApp\Library.Utility\obj\Debug\net8.0\refint\Library.Utility.dll
+C:\LibraryApp\Library.Utility\obj\Debug\net8.0\Library.Utility.pdb
+C:\LibraryApp\Library.Utility\obj\Debug\net8.0\ref\Library.Utility.dll
+C:\LibraryApp\Main LibraryApp\Library.Utility\bin\Debug\net8.0\Library.Utility.deps.json
+C:\LibraryApp\Main LibraryApp\Library.Utility\bin\Debug\net8.0\Library.Utility.dll
+C:\LibraryApp\Main LibraryApp\Library.Utility\bin\Debug\net8.0\Library.Utility.pdb
+C:\LibraryApp\Main LibraryApp\Library.Utility\obj\Debug\net8.0\Library.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\LibraryApp\Main LibraryApp\Library.Utility\obj\Debug\net8.0\Library.Utility.AssemblyInfoInputs.cache
+C:\LibraryApp\Main LibraryApp\Library.Utility\obj\Debug\net8.0\Library.Utility.AssemblyInfo.cs
+C:\LibraryApp\Main LibraryApp\Library.Utility\obj\Debug\net8.0\Library.Utility.csproj.CoreCompileInputs.cache
+C:\LibraryApp\Main LibraryApp\Library.Utility\obj\Debug\net8.0\Library.Utility.sourcelink.json
+C:\LibraryApp\Main LibraryApp\Library.Utility\obj\Debug\net8.0\Library.Utility.dll
+C:\LibraryApp\Main LibraryApp\Library.Utility\obj\Debug\net8.0\refint\Library.Utility.dll
+C:\LibraryApp\Main LibraryApp\Library.Utility\obj\Debug\net8.0\Library.Utility.pdb
+C:\LibraryApp\Main LibraryApp\Library.Utility\obj\Debug\net8.0\ref\Library.Utility.dll
+C:\LibraryApp\LibraryApp Folders\Library.Utility\bin\Debug\net8.0\Library.Utility.deps.json
+C:\LibraryApp\LibraryApp Folders\Library.Utility\bin\Debug\net8.0\Library.Utility.dll
+C:\LibraryApp\LibraryApp Folders\Library.Utility\bin\Debug\net8.0\Library.Utility.pdb
+C:\LibraryApp\LibraryApp Folders\Library.Utility\obj\Debug\net8.0\Library.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\LibraryApp\LibraryApp Folders\Library.Utility\obj\Debug\net8.0\Library.Utility.AssemblyInfoInputs.cache
+C:\LibraryApp\LibraryApp Folders\Library.Utility\obj\Debug\net8.0\Library.Utility.AssemblyInfo.cs
+C:\LibraryApp\LibraryApp Folders\Library.Utility\obj\Debug\net8.0\Library.Utility.csproj.CoreCompileInputs.cache
+C:\LibraryApp\LibraryApp Folders\Library.Utility\obj\Debug\net8.0\Library.Utility.sourcelink.json
+C:\LibraryApp\LibraryApp Folders\Library.Utility\obj\Debug\net8.0\Library.Utility.dll
+C:\LibraryApp\LibraryApp Folders\Library.Utility\obj\Debug\net8.0\refint\Library.Utility.dll
+C:\LibraryApp\LibraryApp Folders\Library.Utility\obj\Debug\net8.0\Library.Utility.pdb
+C:\LibraryApp\LibraryApp Folders\Library.Utility\obj\Debug\net8.0\ref\Library.Utility.dll

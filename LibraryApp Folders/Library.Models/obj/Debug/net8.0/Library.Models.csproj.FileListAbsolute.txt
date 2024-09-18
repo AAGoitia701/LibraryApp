@@ -1,0 +1,36 @@
+C:\LibraryApp\Library.Models\bin\Debug\net8.0\Library.Models.deps.json
+C:\LibraryApp\Library.Models\bin\Debug\net8.0\Library.Models.dll
+C:\LibraryApp\Library.Models\bin\Debug\net8.0\Library.Models.pdb
+C:\LibraryApp\Library.Models\obj\Debug\net8.0\Library.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\LibraryApp\Library.Models\obj\Debug\net8.0\Library.Models.AssemblyInfoInputs.cache
+C:\LibraryApp\Library.Models\obj\Debug\net8.0\Library.Models.AssemblyInfo.cs
+C:\LibraryApp\Library.Models\obj\Debug\net8.0\Library.Models.csproj.CoreCompileInputs.cache
+C:\LibraryApp\Library.Models\obj\Debug\net8.0\Library.Models.sourcelink.json
+C:\LibraryApp\Library.Models\obj\Debug\net8.0\Library.Models.dll
+C:\LibraryApp\Library.Models\obj\Debug\net8.0\refint\Library.Models.dll
+C:\LibraryApp\Library.Models\obj\Debug\net8.0\Library.Models.pdb
+C:\LibraryApp\Library.Models\obj\Debug\net8.0\ref\Library.Models.dll
+C:\LibraryApp\Main LibraryApp\Library.Models\bin\Debug\net8.0\Library.Models.deps.json
+C:\LibraryApp\Main LibraryApp\Library.Models\bin\Debug\net8.0\Library.Models.dll
+C:\LibraryApp\Main LibraryApp\Library.Models\bin\Debug\net8.0\Library.Models.pdb
+C:\LibraryApp\Main LibraryApp\Library.Models\obj\Debug\net8.0\Library.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\LibraryApp\Main LibraryApp\Library.Models\obj\Debug\net8.0\Library.Models.AssemblyInfoInputs.cache
+C:\LibraryApp\Main LibraryApp\Library.Models\obj\Debug\net8.0\Library.Models.AssemblyInfo.cs
+C:\LibraryApp\Main LibraryApp\Library.Models\obj\Debug\net8.0\Library.Models.csproj.CoreCompileInputs.cache
+C:\LibraryApp\Main LibraryApp\Library.Models\obj\Debug\net8.0\Library.Models.sourcelink.json
+C:\LibraryApp\Main LibraryApp\Library.Models\obj\Debug\net8.0\Library.Models.dll
+C:\LibraryApp\Main LibraryApp\Library.Models\obj\Debug\net8.0\refint\Library.Models.dll
+C:\LibraryApp\Main LibraryApp\Library.Models\obj\Debug\net8.0\Library.Models.pdb
+C:\LibraryApp\Main LibraryApp\Library.Models\obj\Debug\net8.0\ref\Library.Models.dll
+C:\LibraryApp\LibraryApp Folders\Library.Models\bin\Debug\net8.0\Library.Models.deps.json
+C:\LibraryApp\LibraryApp Folders\Library.Models\bin\Debug\net8.0\Library.Models.dll
+C:\LibraryApp\LibraryApp Folders\Library.Models\bin\Debug\net8.0\Library.Models.pdb
+C:\LibraryApp\LibraryApp Folders\Library.Models\obj\Debug\net8.0\Library.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\LibraryApp\LibraryApp Folders\Library.Models\obj\Debug\net8.0\Library.Models.AssemblyInfoInputs.cache
+C:\LibraryApp\LibraryApp Folders\Library.Models\obj\Debug\net8.0\Library.Models.AssemblyInfo.cs
+C:\LibraryApp\LibraryApp Folders\Library.Models\obj\Debug\net8.0\Library.Models.csproj.CoreCompileInputs.cache
+C:\LibraryApp\LibraryApp Folders\Library.Models\obj\Debug\net8.0\Library.Models.sourcelink.json
+C:\LibraryApp\LibraryApp Folders\Library.Models\obj\Debug\net8.0\Library.Models.dll
+C:\LibraryApp\LibraryApp Folders\Library.Models\obj\Debug\net8.0\refint\Library.Models.dll
+C:\LibraryApp\LibraryApp Folders\Library.Models\obj\Debug\net8.0\Library.Models.pdb
+C:\LibraryApp\LibraryApp Folders\Library.Models\obj\Debug\net8.0\ref\Library.Models.dll

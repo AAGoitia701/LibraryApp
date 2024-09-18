@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\LibraryApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{45894C22-2472-41DB-9D34-B1B0D1468377}|LibraryApp.csproj|c:\\libraryapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45894C22-2472-41DB-9D34-B1B0D1468377}|LibraryApp.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45894C22-2472-41DB-9D34-B1B0D1468377}|LibraryApp.csproj|c:\\libraryapp\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45894C22-2472-41DB-9D34-B1B0D1468377}|LibraryApp.csproj|solutionrelative:controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BA4DD86-3A82-4DDB-9B24-015DCB6555FA}|Library.DataAccess\\Library.DataAccess.csproj|c:\\libraryapp\\library.dataaccess\\migrations\\20240821094440_addcategorytable.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BA4DD86-3A82-4DDB-9B24-015DCB6555FA}|Library.DataAccess\\Library.DataAccess.csproj|solutionrelative:library.dataaccess\\migrations\\20240821094440_addcategorytable.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BA4DD86-3A82-4DDB-9B24-015DCB6555FA}|Library.DataAccess\\Library.DataAccess.csproj|c:\\libraryapp\\library.dataaccess\\migrations\\20240821101709_adddatacategorytable.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BA4DD86-3A82-4DDB-9B24-015DCB6555FA}|Library.DataAccess\\Library.DataAccess.csproj|solutionrelative:library.dataaccess\\migrations\\20240821101709_adddatacategorytable.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BA4DD86-3A82-4DDB-9B24-015DCB6555FA}|Library.DataAccess\\Library.DataAccess.csproj|c:\\libraryapp\\library.dataaccess\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BA4DD86-3A82-4DDB-9B24-015DCB6555FA}|Library.DataAccess\\Library.DataAccess.csproj|solutionrelative:library.dataaccess\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\LibraryApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\LibraryApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAYwBwAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T18:11:28.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\LibraryApp\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\LibraryApp\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "Controllers\\CategoryController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T18:11:01.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20240821101709_addDataCategoryTable.Designer.cs",
+              "DocumentMoniker": "C:\\LibraryApp\\Library.DataAccess\\Migrations\\20240821101709_addDataCategoryTable.Designer.cs",
+              "RelativeDocumentMoniker": "Library.DataAccess\\Migrations\\20240821101709_addDataCategoryTable.Designer.cs",
+              "ToolTip": "C:\\LibraryApp\\Library.DataAccess\\Migrations\\20240821101709_addDataCategoryTable.Designer.cs",
+              "RelativeToolTip": "Library.DataAccess\\Migrations\\20240821101709_addDataCategoryTable.Designer.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T17:42:07.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20240821094440_AddCategoryTable.Designer.cs",
+              "DocumentMoniker": "C:\\LibraryApp\\Library.DataAccess\\Migrations\\20240821094440_AddCategoryTable.Designer.cs",
+              "RelativeDocumentMoniker": "Library.DataAccess\\Migrations\\20240821094440_AddCategoryTable.Designer.cs",
+              "ToolTip": "C:\\LibraryApp\\Library.DataAccess\\Migrations\\20240821094440_AddCategoryTable.Designer.cs",
+              "RelativeToolTip": "Library.DataAccess\\Migrations\\20240821094440_AddCategoryTable.Designer.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAEwAoAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T17:40:54.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDBContext.cs",
+              "DocumentMoniker": "C:\\LibraryApp\\Library.DataAccess\\Data\\ApplicationDBContext.cs",
+              "RelativeDocumentMoniker": "Library.DataAccess\\Data\\ApplicationDBContext.cs",
+              "ToolTip": "C:\\LibraryApp\\Library.DataAccess\\Data\\ApplicationDBContext.cs",
+              "RelativeToolTip": "Library.DataAccess\\Data\\ApplicationDBContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T17:38:59.364Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

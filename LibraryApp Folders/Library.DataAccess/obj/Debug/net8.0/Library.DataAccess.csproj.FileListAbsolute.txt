@@ -1,0 +1,60 @@
+C:\LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.csproj.AssemblyReference.cache
+C:\LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.AssemblyInfoInputs.cache
+C:\LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.AssemblyInfo.cs
+C:\LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.csproj.CoreCompileInputs.cache
+C:\LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.sourcelink.json
+C:\LibraryApp\Library.DataAccess\bin\Debug\net8.0\Library.DataAccess.deps.json
+C:\LibraryApp\Library.DataAccess\bin\Debug\net8.0\Library.DataAccess.runtimeconfig.json
+C:\LibraryApp\Library.DataAccess\bin\Debug\net8.0\Library.DataAccess.dll
+C:\LibraryApp\Library.DataAccess\bin\Debug\net8.0\Library.DataAccess.pdb
+C:\LibraryApp\Library.DataAccess\bin\Debug\net8.0\Library.Models.dll
+C:\LibraryApp\Library.DataAccess\bin\Debug\net8.0\Library.Utility.dll
+C:\LibraryApp\Library.DataAccess\bin\Debug\net8.0\Library.Models.pdb
+C:\LibraryApp\Library.DataAccess\bin\Debug\net8.0\Library.Utility.pdb
+C:\LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library..1A4F41CD.Up2Date
+C:\LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.dll
+C:\LibraryApp\Library.DataAccess\obj\Debug\net8.0\refint\Library.DataAccess.dll
+C:\LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.pdb
+C:\LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.genruntimeconfig.cache
+C:\LibraryApp\Library.DataAccess\obj\Debug\net8.0\ref\Library.DataAccess.dll
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\bin\Debug\net8.0\Library.DataAccess.deps.json
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\bin\Debug\net8.0\Library.DataAccess.runtimeconfig.json
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\bin\Debug\net8.0\Library.DataAccess.dll
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\bin\Debug\net8.0\Library.DataAccess.pdb
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\bin\Debug\net8.0\Library.Models.dll
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\bin\Debug\net8.0\Library.Utility.dll
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\bin\Debug\net8.0\Library.Models.pdb
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\bin\Debug\net8.0\Library.Utility.pdb
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.csproj.AssemblyReference.cache
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.AssemblyInfoInputs.cache
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.AssemblyInfo.cs
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.csproj.CoreCompileInputs.cache
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.sourcelink.json
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library..1A4F41CD.Up2Date
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.dll
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\obj\Debug\net8.0\refint\Library.DataAccess.dll
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.pdb
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.genruntimeconfig.cache
+C:\LibraryApp\Main LibraryApp\Library.DataAccess\obj\Debug\net8.0\ref\Library.DataAccess.dll
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\bin\Debug\net8.0\Library.DataAccess.deps.json
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\bin\Debug\net8.0\Library.DataAccess.runtimeconfig.json
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\bin\Debug\net8.0\Library.DataAccess.dll
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\bin\Debug\net8.0\Library.DataAccess.pdb
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\bin\Debug\net8.0\Library.Models.dll
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\bin\Debug\net8.0\Library.Utility.dll
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\bin\Debug\net8.0\Library.Models.pdb
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\bin\Debug\net8.0\Library.Utility.pdb
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.csproj.AssemblyReference.cache
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.AssemblyInfoInputs.cache
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.AssemblyInfo.cs
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.csproj.CoreCompileInputs.cache
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.sourcelink.json
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\obj\Debug\net8.0\Library..1A4F41CD.Up2Date
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.dll
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\obj\Debug\net8.0\refint\Library.DataAccess.dll
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.pdb
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\obj\Debug\net8.0\Library.DataAccess.genruntimeconfig.cache
+C:\LibraryApp\LibraryApp Folders\Library.DataAccess\obj\Debug\net8.0\ref\Library.DataAccess.dll
