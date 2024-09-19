@@ -1,4 +1,6 @@
 using Library.DataAccess.Data;
+using Library.DataAccess.Repository;
+using Library.DataAccess.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 
 namespace LibraryApp
@@ -12,7 +14,8 @@ namespace LibraryApp
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<ApplicationDBContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+            builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+            
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

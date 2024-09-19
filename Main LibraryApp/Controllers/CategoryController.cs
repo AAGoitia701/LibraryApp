@@ -1,5 +1,6 @@
 ﻿
 using Library.DataAccess.Data;
+using Library.DataAccess.Repository.IRepository;
 using Library.Models.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,14 +9,14 @@ namespace LibraryApp.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly ApplicationDBContext _dbContext;
-        public CategoryController(ApplicationDBContext context)
+        private readonly ICategoryRepository _catRepoDb; //In order for this to work, you must register the service in Program
+        public CategoryController(ICategoryRepository context)
         {
-            _dbContext = context;
+            _catRepoDb = context;
         }
         public IActionResult Index()
         {
-            List<Category> objCategoryList = _dbContext.Categories.ToList();
+            List<Category> objCategoryList = _catRepoDb.GetAll().ToList();
             return View(objCategoryList);
         }
 
@@ -33,8 +34,8 @@ namespace LibraryApp.Controllers
             }
             if (ModelState.IsValid) //-> Chequea que todo lo que este en el modelo(category context) se cumpla
             {
-                _dbContext.Categories.Add(categoryObj);
-                _dbContext.SaveChanges();
+                _catRepoDb.Add(categoryObj);
+                _catRepoDb.Save();
                 TempData["success"] = "The category was created successfully";
                 return RedirectToAction("Index", "Category"); //Action first -- Controller second
             }
@@ -48,7 +49,7 @@ namespace LibraryApp.Controllers
                 return NotFound();
             }
 
-            Category? categoryFromDB = _dbContext.Categories.Find(categoryId);
+            Category? categoryFromDB = _catRepoDb.GetOne(r => r.Id == categoryId);
             //Category? categoryFromDb2 = _dbContext.Categories.FirstOrDefault(r => r.Id == id);
             //Category? categoryFromDb2 = _dbContext.Categories.Where(r => r.Id == id).FirstOrDefault();
 
@@ -65,8 +66,8 @@ namespace LibraryApp.Controllers
         {
             if (ModelState.IsValid) //-> Chequea que todo lo que este en el modelo(category context) se cumpla
             {
-                _dbContext.Categories.Update(categoryObj);
-                _dbContext.SaveChanges();
+                _catRepoDb.Update(categoryObj);
+                _catRepoDb.Save();
                 TempData["success"] = "The category was updated successfully";
                 return RedirectToAction("Index", "Category"); //Action first -- Controller second
             }
@@ -81,7 +82,7 @@ namespace LibraryApp.Controllers
                 return NotFound();
             }
 
-            Category? categoryFromDB = _dbContext.Categories.Find(categoryId);
+            Category? categoryFromDB = _catRepoDb.GetOne(r => r.Id == categoryId);
 
             if (categoryFromDB == null)
             {
@@ -94,13 +95,13 @@ namespace LibraryApp.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeletePost(int? categoryId)
         {
-            Category? category = _dbContext.Categories.Find(categoryId);
+            Category? category = _catRepoDb.GetOne(r => r.Id == categoryId);
             if (category == null)
             {
                 return NotFound();
             }
-            _dbContext.Categories.Remove(category);
-            _dbContext.SaveChanges();
+            _catRepoDb.Delete(category);
+            _catRepoDb.Save();
             TempData["success"] = "The category was deleted successfully";
             return RedirectToAction("Index", "Category");
 
