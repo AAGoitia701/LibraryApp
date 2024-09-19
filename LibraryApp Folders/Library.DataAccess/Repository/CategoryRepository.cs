@@ -20,14 +20,6 @@ namespace Library.DataAccess.Repository
             _dbContext = db;
         }
 
-        
-
-
-        void ICategoryRepository.Save()
-        {
-            _dbContext.SaveChanges();
-        }
-
         void ICategoryRepository.Update(Category obj)
         {
             _dbContext.Categories.Update(obj);
