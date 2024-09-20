@@ -5,18 +5,21 @@ using Library.Models.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace LibraryApp.Controllers
+namespace LibraryApp.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class CategoryController : Controller
     {
-        private readonly ICategoryRepository _catRepoDb; //In order for this to work, you must register the service in Program
-        public CategoryController(ICategoryRepository context)
+        //we replace icategoryrepo with Iunit of works. IUnitOfWorks internally has ICategoryRepo
+        //private readonly ICategoryRepository _catRepoDb; //In order for this to work, you must register the service in Program
+        private readonly IUnitOfWork _unitOWDb;
+        public CategoryController(IUnitOfWork context)
         {
-            _catRepoDb = context;
+            _unitOWDb = context;
         }
         public IActionResult Index()
         {
-            List<Category> objCategoryList = _catRepoDb.GetAll().ToList();
+            List<Category> objCategoryList = _unitOWDb.Category.GetAll().ToList();
             return View(objCategoryList);
         }
 
@@ -25,17 +28,17 @@ namespace LibraryApp.Controllers
             return View();
         }
 
-        [HttpPost]  
+        [HttpPost]
         public IActionResult Create(Category categoryObj)
         {
-            if(categoryObj.Name == categoryObj.DisplayOrder.ToString())
+            if (categoryObj.Name == categoryObj.DisplayOrder.ToString())
             {
                 ModelState.AddModelError("name", "The Display Order cannot match the Name");
             }
             if (ModelState.IsValid) //-> Chequea que todo lo que este en el modelo(category context) se cumpla
             {
-                _catRepoDb.Add(categoryObj);
-                _catRepoDb.Save();
+                _unitOWDb.Category.Add(categoryObj);
+                _unitOWDb.Save();
                 TempData["success"] = "The category was created successfully";
                 return RedirectToAction("Index", "Category"); //Action first -- Controller second
             }
@@ -49,7 +52,7 @@ namespace LibraryApp.Controllers
                 return NotFound();
             }
 
-            Category? categoryFromDB = _catRepoDb.GetOne(r => r.Id == categoryId);
+            Category? categoryFromDB = _unitOWDb.Category.GetOne(r => r.Id == categoryId);
             //Category? categoryFromDb2 = _dbContext.Categories.FirstOrDefault(r => r.Id == id);
             //Category? categoryFromDb2 = _dbContext.Categories.Where(r => r.Id == id).FirstOrDefault();
 
@@ -66,8 +69,8 @@ namespace LibraryApp.Controllers
         {
             if (ModelState.IsValid) //-> Chequea que todo lo que este en el modelo(category context) se cumpla
             {
-                _catRepoDb.Update(categoryObj);
-                _catRepoDb.Save();
+                _unitOWDb.Category.Update(categoryObj);
+                _unitOWDb.Save();
                 TempData["success"] = "The category was updated successfully";
                 return RedirectToAction("Index", "Category"); //Action first -- Controller second
             }
@@ -82,7 +85,7 @@ namespace LibraryApp.Controllers
                 return NotFound();
             }
 
-            Category? categoryFromDB = _catRepoDb.GetOne(r => r.Id == categoryId);
+            Category? categoryFromDB = _unitOWDb.Category.GetOne(r => r.Id == categoryId);
 
             if (categoryFromDB == null)
             {
@@ -95,13 +98,13 @@ namespace LibraryApp.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeletePost(int? categoryId)
         {
-            Category? category = _catRepoDb.GetOne(r => r.Id == categoryId);
+            Category? category = _unitOWDb.Category.GetOne(r => r.Id == categoryId);
             if (category == null)
             {
                 return NotFound();
             }
-            _catRepoDb.Delete(category);
-            _catRepoDb.Save();
+            _unitOWDb.Category.Delete(category);
+            _unitOWDb.Save();
             TempData["success"] = "The category was deleted successfully";
             return RedirectToAction("Index", "Category");
 

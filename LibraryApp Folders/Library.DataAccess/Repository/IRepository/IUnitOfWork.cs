@@ -10,6 +10,6 @@ namespace Library.DataAccess.Repository.IRepository
     {
         ICategoryRepository Category { get;  }
 
-        void Save();
+        public void Save();
     }
 }
