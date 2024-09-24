@@ -2,6 +2,8 @@ using Library.DataAccess.Data;
 using Library.DataAccess.Repository;
 using Library.DataAccess.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using System.Globalization;
 
 namespace LibraryApp
 {
@@ -10,6 +12,7 @@ namespace LibraryApp
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+           
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
@@ -19,6 +22,18 @@ namespace LibraryApp
 
 
             var app = builder.Build();
+
+            // configuration of culture (en-US for doubles and decimals)
+            var defaultCulture = new CultureInfo("en-US");
+            var localizationOptions = new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture(defaultCulture),
+                SupportedCultures = new[] { defaultCulture },
+                SupportedUICultures = new[] { defaultCulture }
+            };
+
+            // Apply culture in all requests
+            app.UseRequestLocalization(localizationOptions);
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -41,5 +56,6 @@ namespace LibraryApp
 
             app.Run();
         }
+
     }
 }

@@ -12,10 +12,12 @@ namespace Library.DataAccess.Repository
     {
         private ApplicationDBContext _dbContext;
         public ICategoryRepository Category { get; private set; }
+        public IProductRepository Product { get; private set; }
         public UnitOfWork(ApplicationDBContext db)
         {
             _dbContext = db;
             Category = new CategoryRepository(_dbContext);
+            Product = new ProductRepository(_dbContext);
         } 
 
         public void Save()

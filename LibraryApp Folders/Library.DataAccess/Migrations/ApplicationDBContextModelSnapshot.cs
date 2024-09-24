@@ -21,7 +21,7 @@ namespace Library.DataAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("LibraryApp.Models.Category", b =>
+            modelBuilder.Entity("Library.Models.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -34,7 +34,8 @@ namespace Library.DataAccess.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.HasKey("Id");
 
@@ -59,6 +60,105 @@ namespace Library.DataAccess.Migrations
                             DisplayOrder = 3,
                             Name = "History"
                         });
+                });
+
+            modelBuilder.Entity("Library.Models.Models.Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Author")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ISBN")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageURL")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("ListPrice")
+                        .HasColumnType("float");
+
+                    b.Property<double>("ListPrice30")
+                        .HasColumnType("float");
+
+                    b.Property<double>("ListPriceHigher30")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Author = "J.K Rowling",
+                            CategoryId = 2,
+                            Description = "The hope and wonder of Harry Potter's world will make you want to escape to Hogwarts again and again. The magic starts here!",
+                            ISBN = "1408855658",
+                            ImageURL = "",
+                            ListPrice = 11.9,
+                            ListPrice30 = 7.5300000000000002,
+                            ListPriceHigher30 = 5.5499999999999998,
+                            Title = "Harry Potter And The Philosopher'S Stone"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Author = "J.R.R Tolkien",
+                            CategoryId = 2,
+                            Description = "It is the ancient drama to which the characters in The Lord of the Rings look back, and in whose events some of them such as Elrond and Galadriel took part.",
+                            ISBN = "9780261102736",
+                            ImageURL = "",
+                            ListPrice = 8.0,
+                            ListPrice30 = 6.2300000000000004,
+                            ListPriceHigher30 = 4.6500000000000004,
+                            Title = "The Silmarillion"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Author = "Isaac Asimov",
+                            CategoryId = 2,
+                            Description = "In these stories Isaac Asimov creates the Three Laws of Robotics and ushers in the Robot Age.\r\n\r\nEarth is ruled by master-machines but the Three Laws of Robotics have been designed to ensure humans maintain the upper hand.",
+                            ISBN = "9780007532278",
+                            ImageURL = "",
+                            ListPrice = 10.0,
+                            ListPrice30 = 7.4299999999999997,
+                            ListPriceHigher30 = 5.25,
+                            Title = "I, Robot"
+                        });
+                });
+
+            modelBuilder.Entity("Library.Models.Models.Product", b =>
+                {
+                    b.HasOne("Library.Models.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
                 });
 #pragma warning restore 612, 618
         }
