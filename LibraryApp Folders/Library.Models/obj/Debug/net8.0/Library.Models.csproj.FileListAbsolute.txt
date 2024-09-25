@@ -34,3 +34,4 @@ C:\LibraryApp\LibraryApp Folders\Library.Models\obj\Debug\net8.0\Library.Models.
 C:\LibraryApp\LibraryApp Folders\Library.Models\obj\Debug\net8.0\refint\Library.Models.dll
 C:\LibraryApp\LibraryApp Folders\Library.Models\obj\Debug\net8.0\Library.Models.pdb
 C:\LibraryApp\LibraryApp Folders\Library.Models\obj\Debug\net8.0\ref\Library.Models.dll
+C:\LibraryApp\LibraryApp Folders\Library.Models\obj\Debug\net8.0\Library.Models.csproj.AssemblyReference.cache

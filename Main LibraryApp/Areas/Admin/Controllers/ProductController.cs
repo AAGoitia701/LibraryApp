@@ -1,6 +1,7 @@
 ﻿using Library.DataAccess.Data;
 using Library.DataAccess.Repository.IRepository;
 using Library.Models.Models;
+using Library.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -22,73 +23,47 @@ namespace LibraryApp.Areas.Admin.Controllers
             return View(listProduct);
         }
 
-        public IActionResult Create() 
+        public IActionResult Upsert(int? id) //Create + Update
         {
-            IEnumerable<SelectListItem> CategoryList = _IUnitOfWorkDb.Category.GetAll().Select(r => new SelectListItem
-            {
-                Text = r.Name,
-                Value = r.Id.ToString()
-            });
 
-            ViewBag.CategoryList = CategoryList;
-            //ViewData[nameof(CategoryList)] = CategoryList;
-            return View(); 
+            ProductVM productVM = new()
+            {
+                CategoryList = _IUnitOfWorkDb.Category.GetAll().Select(r => new SelectListItem
+                {
+                    Text = r.Name,
+                    Value = r.Id.ToString()
+                }),
+
+
+                Product = new Product()
+            };
+            if(id == null || id == 0)
+            {
+                //create
+                return View(productVM);
+            }
+            else
+            {
+                //update
+                productVM.Product = _IUnitOfWorkDb.Product.GetOne(r => r.Id == id);
+                return View(productVM);
+            }
+
+            
         }
         [HttpPost]
-        public IActionResult Create(Product prodObj)
+        public IActionResult Upsert(ProductVM prodObj, IFormFile? file) //It is now ProductVM not just Product. 
         {
             if (ModelState.IsValid) 
             {
-                _IUnitOfWorkDb.Product.Add(prodObj);
+                _IUnitOfWorkDb.Product.Add(prodObj.Product);
                 _IUnitOfWorkDb.Save();
                 return RedirectToAction("Index", "Product");      
             }
             return View();
         }
 
-        public IActionResult Edit(int? IdProduct) 
-        { 
-            if(IdProduct == 0 || IdProduct == null)
-            {
-                return NotFound();
-            }
-            Product? objProduct = _IUnitOfWorkDb.Product.GetOne(r => r.Id == IdProduct);
-            if (objProduct == null)
-            {
-                return NotFound();
-            }
-
-
-            return View(objProduct); 
         
-        }
-
-        [HttpPost]
-        public IActionResult Edit(Product prod) 
-        {
-            if((prod.ListPrice).GetType() != typeof(double)){
-                prod.ListPrice = (double)(prod.ListPrice);
-            }
-            if ((prod.ListPrice30).GetType() != typeof(double))
-            {
-                prod.ListPrice30 = (double)(prod.ListPrice30);
-            }
-            if ((prod.ListPriceHigher30).GetType() != typeof(double))
-            {
-                prod.ListPriceHigher30 = (double)(prod.ListPriceHigher30);
-            }
-
-            if (ModelState.IsValid)
-            {
-
-                _IUnitOfWorkDb.Product.Update(prod);
-                _IUnitOfWorkDb.Save();
-
-                return RedirectToAction("Index", "Product");
-            }
-            return View();
-        }
-
         public IActionResult Delete(int? IdProduct) 
         {
             if(IdProduct==0 || IdProduct == null)
