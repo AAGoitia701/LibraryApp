@@ -1,17 +1,17 @@
-﻿$document.ready(function () {
+﻿$(document).ready(function () {
     loadDataTable();
 });
 
 function loadDataTable() {
     $('#myTable').DataTable({
-        "ajax": url: '/admin/product/getall'
-    },
-        "columns": [
-        { data: 'name' },
-        { data: 'position' },
-        { data: 'salary' },
-        { data: 'office' }
+        ajax: { url: '/Admin/Product/GetAll' },
+        columns: [
+            { data: 'title' },
+            { data: 'isbn' },
+            { data: 'author' },
+            { data: 'listPrice' },
+            { data: 'category.name'}
         ]
-    );
+    });
 }
 
