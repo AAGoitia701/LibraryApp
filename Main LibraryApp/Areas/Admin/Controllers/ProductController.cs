@@ -13,18 +13,21 @@ namespace LibraryApp.Areas.Admin.Controllers
     [Area("Admin")]
     public class ProductController : Controller
     {   private readonly IUnitOfWork _IUnitOfWorkDb;
-        public ProductController(IUnitOfWork db)
+        private readonly IWebHostEnvironment _WebHostEnvironment; //use it so we can save image in the right folder
+        public ProductController(IUnitOfWork db, IWebHostEnvironment webHostEnvironment)
         {
             _IUnitOfWorkDb = db;
+            _WebHostEnvironment = webHostEnvironment;
         }
         public IActionResult Index()
         {   
-            List<Product> listProduct = _IUnitOfWorkDb.Product.GetAll().ToList();
+            List<Product> listProduct = _IUnitOfWorkDb.Product.GetAll(includeProperties:"Category").ToList();
             return View(listProduct);
         }
 
         public IActionResult Upsert(int? id) //Create + Update
         {
+            
 
             ProductVM productVM = new()
             {
@@ -45,7 +48,7 @@ namespace LibraryApp.Areas.Admin.Controllers
             else
             {
                 //update
-                productVM.Product = _IUnitOfWorkDb.Product.GetOne(r => r.Id == id);
+                productVM.Product = _IUnitOfWorkDb.Product.GetOne(r => r.Id == id, includeProperties: "Category");
                 return View(productVM);
             }
 
@@ -53,11 +56,45 @@ namespace LibraryApp.Areas.Admin.Controllers
         }
         [HttpPost]
         public IActionResult Upsert(ProductVM prodObj, IFormFile? file) //It is now ProductVM not just Product. 
-        {
+        {//file comes from name in the view
             if (ModelState.IsValid) 
             {
-                _IUnitOfWorkDb.Product.Add(prodObj.Product);
-                _IUnitOfWorkDb.Save();
+                string wwwRootPath = _WebHostEnvironment.WebRootPath;
+                if(file != null)
+                {
+                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);//creating name for file uploaded
+                    string productPath = Path.Combine(wwwRootPath, @"images\product"); //getting the route of the right folder
+
+                    if (!string.IsNullOrEmpty(prodObj.Product.ImageURL)) //check if there is a imageUrl in the folder for this particular product
+                    {
+                        //delete old img
+                        var oldImagePath = Path.Combine(wwwRootPath, prodObj.Product.ImageURL.TrimStart('/'));
+                        if (System.IO.File.Exists(oldImagePath)) //check if that img exists
+                        {
+                            System.IO.File.Delete(oldImagePath);
+                        }
+                    }
+
+                    using (var fileStream = new FileStream(Path.Combine(productPath, fileName), FileMode.Create))
+                    {
+                        file.CopyTo(fileStream);
+                    }
+
+                    prodObj.Product.ImageURL = @"/images/product/" + fileName;
+                }
+                if (prodObj.Product.Id == 0 || prodObj.Product.Id == null)
+                {
+                    _IUnitOfWorkDb.Product.Add(prodObj.Product);
+                }
+                else
+                {
+                    _IUnitOfWorkDb.Product.Update(prodObj.Product);
+                }
+
+
+
+                    _IUnitOfWorkDb.Save();
+                TempData["success"] = "Product created successfully";
                 return RedirectToAction("Index", "Product");      
             }
             return View();
@@ -71,7 +108,7 @@ namespace LibraryApp.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            Product objProduct = _IUnitOfWorkDb.Product.GetOne(r =>r.Id == IdProduct);
+            Product objProduct = _IUnitOfWorkDb.Product.GetOne(r =>r.Id == IdProduct, includeProperties:"Category");
             if (objProduct == null)
             {
                 return NotFound();
@@ -89,9 +126,20 @@ namespace LibraryApp.Areas.Admin.Controllers
 
             _IUnitOfWorkDb.Product.Delete(objProduct);
             _IUnitOfWorkDb.Save();
+            TempData["success"] = "The product was deleted successfully";
             return RedirectToAction("Index", "Product");
         }
 
+        #region API Calls
+
+        [HttpGet]
+        public IActionResult GetAll() 
+        {
+            List<Product> listProduct = _IUnitOfWorkDb.Product.GetAll(includeProperties: "Category").ToList();
+            return Json(new {data = listProduct});
+        }
+
+        #endregion
 
     }
 }

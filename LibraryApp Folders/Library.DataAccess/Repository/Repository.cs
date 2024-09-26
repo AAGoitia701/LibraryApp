@@ -19,6 +19,8 @@ namespace Library.DataAccess.Repository
             _dbContext = db;
             this.dbSet = _dbContext.Set<T>(); //We set the dbSet as type T, so when we change the Y to Category dbSet changes to category too
             // _dbContext.Categories == dbSet
+          //  _dbContext.Products.Include(r => r.Category);//when it retrieves product, it will come with the category table.
+            //you can include multiple variables/tables
         }
         public void Add(T entity)
         {
@@ -35,16 +37,33 @@ namespace Library.DataAccess.Repository
             dbSet.RemoveRange(entities);
         }
 
-        public IEnumerable<T> GetAll()
+        //Category, Order, 
+        public IEnumerable<T> GetAll(string? includeProperties=null)
         {
             IQueryable<T> query = dbSet;
+            if (!string.IsNullOrEmpty(includeProperties))
+            {
+                foreach (var property in includeProperties
+                    .Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries)) 
+                    {
+                    query = query.Include(property);
+                }
+            }
             return query.ToList();
         }
 
-        public T GetOne(Expression<Func<T, bool>> filter)
+        public T GetOne(Expression<Func<T, bool>> filter, string? includeProperties)
         {
             IQueryable<T> query = dbSet;
             query = query.Where(filter);
+            if (!string.IsNullOrEmpty(includeProperties))
+            {
+                foreach (var property in includeProperties
+                    .Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(property);
+                }
+            }
             return query.FirstOrDefault();
         }
     }

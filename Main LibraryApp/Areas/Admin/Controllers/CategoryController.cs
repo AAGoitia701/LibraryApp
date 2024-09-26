@@ -52,7 +52,7 @@ namespace LibraryApp.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            Category? categoryFromDB = _unitOWDb.Category.GetOne(r => r.Id == categoryId);
+            Category? categoryFromDB = _unitOWDb.Category.GetOne(r => r.Id == categoryId, includeProperties: "Category");
             //Category? categoryFromDb2 = _dbContext.Categories.FirstOrDefault(r => r.Id == id);
             //Category? categoryFromDb2 = _dbContext.Categories.Where(r => r.Id == id).FirstOrDefault();
 
@@ -85,7 +85,7 @@ namespace LibraryApp.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            Category? categoryFromDB = _unitOWDb.Category.GetOne(r => r.Id == categoryId);
+            Category? categoryFromDB = _unitOWDb.Category.GetOne(r => r.Id == categoryId, includeProperties: "Category");
 
             if (categoryFromDB == null)
             {
@@ -98,7 +98,7 @@ namespace LibraryApp.Areas.Admin.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeletePost(int? categoryId)
         {
-            Category? category = _unitOWDb.Category.GetOne(r => r.Id == categoryId);
+            Category? category = _unitOWDb.Category.GetOne(r => r.Id == categoryId, includeProperties: "Category");
             if (category == null)
             {
                 return NotFound();

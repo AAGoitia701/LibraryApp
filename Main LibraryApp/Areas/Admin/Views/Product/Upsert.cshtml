@@ -5,12 +5,17 @@
         <div class="row">
             <div class="col-12 text-center">
                 <h2 class="text-dark py-2"> @(Model.Product.Id != 0 ? "Update" : "Create") Product</h2>
+                @if(Model.Product.Id != 0)
+                {
+                    <img src="@Model.Product.ImageURL" width="200vw" height="auto" style="border-radius: 5px; border:5px solid white;" />
+                }
             </div>
         </div>
     </div>
 
 <form method="post" enctype="multipart/form-data">
-    <input asp-for="Product.Id" hidden/> <!--When we post, it will always be populated-->
+    <input asp-for="Product.Id" hidden/> <!--When we post, it will send the id to the backend-->
+        <input asp-for="Product.ImageURL" hidden /> <!--When we post, it will send the ImageURL to the backend-->
     <div class="border p-3 my-4">
         <div class="mb-3 row">
             <label asp-for="Product.Title"></label>
@@ -20,7 +25,7 @@
 
         <div class="mb-3 row">
             <label asp-for="Product.Description"></label>
-            <input asp-for="Product.Description" class="form-control" />
+            <textarea asp-for="Product.Description" class="form-control"></textarea>
             <span asp-validation-for="Product.Description" class="text-danger"></span>
         </div>
 
@@ -56,8 +61,8 @@
 
         <!--We'll get the data for the dropdown from Product VM-->
         <div class="mb-3 row">
-            <label asp-for="Product.CategoryId"></label>
-            <select asp-for="@Model.Product.CategoryId" asp-items="@Model.CategoryList" class="form-control">
+            <label asp-for="Product.Category.Name"></label>
+            <select asp-for="@Model.Product.Category.Name" asp-items="@Model.CategoryList" class="form-control">
                 <option disabled selected>--Select Category--</option>
             </select>
             <span asp-validation-for="Product.CategoryId" class="text-danger"></span>
@@ -65,13 +70,20 @@
 
         <div class="mb-3 row">
             <label asp-for="Product.ImageURL"></label>
-            <input type="file" class="form-control" />
+            <input type="file" name="file" class="form-control" />
             <span asp-validation-for="Product.ImageURL" class="text-danger"></span>
         </div>
+                  
 
         <div class="row">
             <div class="col-6">
-                <button type="submit" class="btn btn-outline-dark btn-md">Create</button>
+                    @if(Model.Product.Id != 0)
+                    {
+                        <button type="submit" class="btn btn-outline-dark btn-md">Update</button>
+                    }else{
+                        <button type="submit" class="btn btn-outline-dark btn-md">Create</button>
+                    }
+                
             </div>
             <div class="col-6 text-end">
                 <a asp-controller="Product" asp-action="Index" class="btn btn-secondary btn-md mx-auto">Back To List</a>

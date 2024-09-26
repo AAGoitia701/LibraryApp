@@ -11,8 +11,8 @@ namespace Library.DataAccess.Repository.IRepository
     {
         //For exmaple -> T ==Category
         //Get the complete list of categories
-        IEnumerable<T> GetAll();
-        T GetOne(Expression<Func<T, bool>> filter);
+        IEnumerable<T> GetAll(string? includeProperties = null);
+        T GetOne(Expression<Func<T, bool>> filter, string? includeProperties);
         void Add(T entity); 
         void Delete(T entity);
         void DeleteRange(IEnumerable<T> entities);
