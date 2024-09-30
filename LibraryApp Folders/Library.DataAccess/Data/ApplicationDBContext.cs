@@ -1,9 +1,10 @@
 ﻿using Library.Models.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Library.DataAccess.Data
 {
-    public class ApplicationDBContext : DbContext
+    public class ApplicationDBContext : IdentityDbContext //We changed DbContext for this
     {
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options)
         {
@@ -14,6 +15,8 @@ namespace Library.DataAccess.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);//added this so we dont get error because of the keys of identity tables, cos' they're mapped onModelCreating
+
             modelBuilder.Entity<Category>().HasData( //In table 'category' you will add the rows viewed here -> it is data
                 new Category { Id = 1, Name= "Action", DisplayOrder=1},
                 new Category { Id = 2, Name = "SciFi", DisplayOrder = 2 },

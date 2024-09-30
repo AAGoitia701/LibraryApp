@@ -52,7 +52,7 @@ namespace Library.DataAccess.Repository
             return query.ToList();
         }
 
-        public T GetOne(Expression<Func<T, bool>> filter, string? includeProperties)
+        public T GetOne(Expression<Func<T, bool>> filter, string? includeProperties=null)
         {
             IQueryable<T> query = dbSet;
             query = query.Where(filter);

@@ -44,6 +44,14 @@ namespace LibraryApp
 
             }
 
+            app.UseCors(builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()  // Esto permite todos los métodos HTTP, incluidos DELETE, POST, etc.
+                       .AllowAnyHeader();
+            });
+
+
             //app.UseHttpsRedirection();
             app.UseStaticFiles();
 
